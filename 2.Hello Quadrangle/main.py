@@ -52,6 +52,7 @@ def main():
         glfw.poll_events()
         glClear(GL_COLOR_BUFFER_BIT)
         glDrawArrays(GL_TRIANGLE_FAN, 0, 4)
+        glTranslatef(0.5, 0.5, 1)
         glfw.swap_buffers(window)
 
     glfw.terminate()
