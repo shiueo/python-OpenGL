@@ -10,7 +10,7 @@ def main():
 
     glfw.window_hint(glfw.RESIZABLE, glfw.FALSE)
 
-    window = glfw.create_window(1200, 800, "1.Hello Triangle", None, None)
+    window = glfw.create_window(1200, 800, "1. Hello Triangle", None, None)
 
     if not window:
         glfw.terminate()
@@ -35,7 +35,7 @@ def main():
 
     VBO = glGenBuffers(1)
     glBindBuffer(GL_ARRAY_BUFFER, VBO)
-    glBufferData(GL_ARRAY_BUFFER, 72, triangle, GL_STATIC_DRAW)
+    glBufferData(GL_ARRAY_BUFFER, 4*len(triangle), triangle, GL_STATIC_DRAW)
 
     position = glGetAttribLocation(shader, "position")
     glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, 24, ctypes.c_void_p(0))
